@@ -1,25 +1,76 @@
-#0
-lista = list(range(2,21,2))
-print(lista)
-#1
+# # ESTRUTURAS DE DADOS 4  TIPOS DE DADOS PRIMITIVOS
+# # PALAVRA = 
 
-numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-print(numeros)
 
-#2
+# variaveis  =  10 
+# lista  =  [1,2,3]
+# tuplas =  (1,2,3,6)
+# conjuntos  = {1,2,3,6}
 
-print(numeros[2])
 
-#3
 
-numeros.append (9)
-print(numeros)
+# e-commerce 
 
-#4
 
-numeros.remove(5)
-print(numeros)
+loja = {
 
-#5
-carros = ["sentra", "corsa", "civic"]
-print(carros, numeros)
+
+    'livros':{
+            'a':100.0,
+            'b':250.0,
+            'c':315.55
+        },
+    'tablets':{
+            'a': 1500.0,
+            'b':3500.0,
+            'c':5000.0
+    },
+    'fones':{
+            'x': 350.0,
+            'y':250.0,
+            'z':1500.0,
+    }
+
+
+}
+
+
+
+
+carrinho = []
+valores  = []
+
+
+
+print('Bem vindo(a) a loja xyz')
+
+
+
+se1 = input(f'Seção do produto {loja.keys()} >>')
+prod1 = input(f'Escolha o produto: {loja[se1]} ')
+
+
+carrinho.append(prod1)
+valores.append(loja[se1][prod1])
+
+
+se2 = input(f'Seção do produto {loja.keys()}>>')
+prod2 = input(f'Escolha o produto: {loja[se2]}')
+
+
+carrinho.append(prod2)
+p = loja[se2][prod2]
+valores.append(p)
+
+
+print('Carrinho  de compras: ', carrinho)
+print('Total', sum(valores))
+
+
+
+pag = input('escolha a forma de pagamento: pix, cc, cd')
+print('Sua forma de pagamento é', pag)
+print('Obrigada volte sempre! ')
+
+
+
