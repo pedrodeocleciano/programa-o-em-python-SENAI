@@ -1,0 +1,49 @@
+
+
+#1
+arquivo = open("arquivo.txt", "w")
+arquivo.write("Olá, este é um arquivo de teste.")
+arquivo.close()
+
+arquivo = open("arquivo.txt", "r")
+print(arquivo.read())
+arquivo.close()
+
+#2
+
+import os
+
+os.mkdir("meu_diretorio")
+print("Diretório criado com sucesso!")
+
+#3
+
+import os
+
+os.rename("meu_diretorio", "novo_diretorio")
+print("Diretório renomeado com sucesso!")
+
+#4
+
+import os
+
+arquivos = os.listdir("novo_diretorio")
+print("Arquivos no diretório:")
+for arquivo in arquivos:
+    print(arquivo)
+
+#5
+
+import shutil
+
+shutil.copy("arquivo.txt", "novo_diretorio/arquivo.txt")
+print("Arquivo copiado com sucesso!")
+
+#6
+
+import os
+os.remove("novo_diretorio/arquivo.txt")
+
+os.rmdir("novo_diretorio")
+
+print("Arquivo e diretório removidos com sucesso!")
